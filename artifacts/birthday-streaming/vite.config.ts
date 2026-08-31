@@ -28,7 +28,7 @@ if (!basePath) {
 }
 
 export default defineConfig({
-  base: basePath,
+  base: process.env.GITHUB_ACTIONS ? '/Ash-Bday-/' : basePath,
   plugins: [
     react(),
     tailwindcss(),
